@@ -1,17 +1,26 @@
-﻿
-
-
-
-
+﻿using System;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        Vehicle myCar = new Car();
-        Vehicle myBike = new Bike();
-        myCar.Start();
-        myBike.Start();
-        Console.ReadLine();
+        
+        Student student = new Student { Name = "jyo", StudentID = 43 };
+
+       
+        Person person = student;  
+        person.Display();         
+
+       
+        Student downcastedStudent = (Student)person;  
+        downcastedStudent.ShowID();  
+
+        
+        Student safeStudent = person as Student;
+        if (safeStudent != null)
+        {
+            safeStudent.ShowID();  
+        }
     }
 }
+

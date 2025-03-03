@@ -1,8 +1,16 @@
-﻿using System;
-public class Vehicle
+﻿public class Car : Vehicle
 {
-    public virtual void Start()
+    public int NumberOfDoors { get; set; }
+
+    public Car(string brand, int speed, int doors) : base(brand, speed)
     {
-        Console.WriteLine("Vehicle is starting");
+        NumberOfDoors = doors;
+    }
+
+    public override void DisplayInfo()
+    {
+        base.DisplayInfo(); // Calls the base class method
+        Console.WriteLine($"Number of Doors: {NumberOfDoors}");
     }
 }
+

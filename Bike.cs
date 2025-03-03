@@ -1,8 +1,16 @@
-﻿using System;
-public class Bike : Vehicle
+﻿public class Bike : Vehicle
 {
-    public override void Start()
+    public bool HasGear { get; set; }
+
+    public Bike(string brand, int speed, bool hasGear) : base(brand, speed)
     {
-        Console.WriteLine("Bike is starting with kick start");
+        HasGear = hasGear;
+    }
+
+    public override void DisplayInfo()
+    {
+        base.DisplayInfo(); 
+        Console.WriteLine($"Has Gear: {HasGear}");
     }
 }
+

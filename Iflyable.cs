@@ -1,0 +1,7 @@
+﻿interface IFlyable
+{
+    void Fly();
+}
+
+
+

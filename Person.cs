@@ -1,13 +1,9 @@
-﻿using System;
-
-public class Person
+﻿class Person
 {
     public string Name { get; set; }
-    public int Age { get; set; }
 
-    // Virtual method to be overridden
-    public virtual void GetDetails()
+    public void Display()
     {
-        Console.WriteLine($"Name: {Name}, Age: {Age}");
+        Console.WriteLine("I am a person.");
     }
 }

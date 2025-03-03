@@ -1,10 +1,10 @@
-﻿public class Student : Person
+﻿class Student : Person
 {
-    public string Course { get; set; }
+    public int StudentID { get; set; }
 
-    // Override the GetDetails method
-    public override void GetDetails()
+    public void ShowID()
     {
-        Console.WriteLine($"Student Name: {Name}, Age: {Age}, Course: {Course}");
+        Console.WriteLine($"Student ID: {StudentID}");
     }
 }
+
